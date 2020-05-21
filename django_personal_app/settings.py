@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my apps
-    'todo',
-    'portfolio',
+    'todo.apps.TodoConfig',
+    'portfolio.apps.PortfolioConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [

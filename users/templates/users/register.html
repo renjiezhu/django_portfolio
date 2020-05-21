@@ -1,0 +1,42 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block head %}
+<link href="{% static 'css/signin.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block div1 %}
+    <body class="text-center">
+        <form class="form-signin" method="post">
+            {% csrf_token %}
+            <img class="mb-4" src="{% static 'images/icons8-r-50.png'%}" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Join Today</h1>
+
+            
+            {{form.username.label}}
+            {{form.username}}
+            <br>
+
+            {{form.email.label}}
+            {{form.email}}
+            <br>
+
+            {{form.password1.label}}
+            {{form.password1}}
+            <br>
+
+            {{form.password2.label}}
+            {{form.password2}}
+
+            <botton class="btn btn-lg btn-primary btn-block" type="Submit">Sign Up</botton>
+
+        </form>
+
+        {{ form.errors }}
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a href="#" class="ml-2">Log in</a>
+            </small>
+        </div>
+    </body>
+{% endblock div1 %}
