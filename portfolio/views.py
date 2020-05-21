@@ -11,12 +11,12 @@ def homepage(request):
 
 def project_page(request):
     context = {
-        
+        'title': 'Projects'
     }
     return render(request, 'portfolio/index.html', context)
 
 def contact_page(request):
     context = {
-        
+        'title': 'Contacts',
     }
-    return render(request, 'portfolio/index.html', context)
+    return render(request, 'portfolio/contacts.html', context)
