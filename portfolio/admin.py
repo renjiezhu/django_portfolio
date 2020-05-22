@@ -3,4 +3,4 @@ from .models import *
 
 # Register your models here.
 
-admin.site.Register(Experience)
+admin.site.register(Experience)

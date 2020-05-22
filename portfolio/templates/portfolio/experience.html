@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h2>Professional Experience</h2>
+{% for work in work_exp %}
+    <h3>{{work.title}}</h3>
+    {{work.description}}
+    <br>
+{% endfor %}
+
+<h2>Projects</h2>
+{% for proj in proj_exp %}
+    <h3>{{proj.title}}</h3>
+    {{proj.description}}
+{% endfor %}
+
+{% endblock content %}
