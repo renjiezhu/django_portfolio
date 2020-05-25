@@ -24,8 +24,11 @@ SECRET_KEY = 'zp2a&7qi^!$upx!#ve_pis)71$wq7mpm&t@vf*53s+lqi#+5x$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    # "*" # required when debug is False
+]
 
 
 # Application definition
@@ -39,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my apps
-    'todo.apps.TodoConfig',
-    'portfolio.apps.PortfolioConfig',
-    'users.apps.UsersConfig',
+    'todo',
+    'portfolio',
+    'users',
 ]
 
 MIDDLEWARE = [
