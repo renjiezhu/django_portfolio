@@ -25,11 +25,14 @@
 
     {% include 'portfolio/navbar.html' %}
 
-    <div>
-
-        {% block content %}
-
-        {% endblock content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
 
     </div>
     <hr>

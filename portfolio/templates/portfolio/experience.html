@@ -1,18 +1,68 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-
-<h2>Professional Experience</h2>
+<h3 class="text-center text-uppercase">Professional Experience</h3>
+<br>
 {% for work in work_exp %}
-    <h3>{{work.title}}</h3>
-    {{work.description}}
-    <br>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">
+            {{work.title}}
+            </h5>
+            <h6 class="class-subtitle font-italic">
+            {{work.start_time}} - 
+            {% if work.end_time %}{{work.end_time}}
+            {% else %}Present
+            {% endif %}</h6>
+            <p class="card-text">{{work.description}}</p>
+            <a href="{{work.github_url}}" class="badge badge-primary">github</a>
+            <a href="#" class="badge badge-info">details</a>
+        </div>
+        <br>
+    </div>
 {% endfor %}
 
-<h2>Projects</h2>
-{% for proj in proj_exp %}
-    <h3>{{proj.title}}</h3>
-    {{proj.description}}
+<h3 class="text-center text-uppercase">Education</h3>
+<br>
+{% for edu in education %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">
+            {{edu.title}}
+            </h5>
+            <h6 class="class-subtitle font-italic">
+            {{edu.start_time}} - 
+            {% if edu.end_time %}{{edu.end_time}}
+            {% else %}Present
+            {% endif %}</h6>
+            <p class="card-text">{{edu.description}}</p>
+            {% comment %} <a href="{{edu.github_url}}" class="badge badge-primary">github</a> {% endcomment %}
+            {% comment %} <a href="#" class="badge badge-info">details</a> {% endcomment %}
+        </div>
+        <br>
+    </div>
 {% endfor %}
+
+<h3 class="text-center text-uppercase">Projects</h3>
+<br>
+{% for proj in proj_exp %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">
+            {{proj.title}}
+            </h5>
+            <h6 class="class-subtitle font-italic">
+            {{proj.start_time}} - 
+            {% if proj.end_time %}{{proj.end_time}}
+            {% else %}Present
+            {% endif %}</h6>
+            <p class="card-text">{{proj.description}}</p>
+            <a href="{{proj.github_url}}" class="badge badge-primary">github</a>
+            <a href="#" class="badge badge-info">details</a>
+        </div>
+        <br>
+    </div>
+{% endfor %}
+
 
 {% endblock content %}

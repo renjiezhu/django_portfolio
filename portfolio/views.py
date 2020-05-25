@@ -11,13 +11,18 @@ def homepage(request):
 
 def project_page(request):
 
-    work_exp = Experience.objects.filter(experience_type='work')
-    proj_exp = Experience.objects.filter(experience_type='project')
+    all_proj = Experience.objects.all()
+
+    work_exp = all_proj.filter(experience_type='work')
+    proj_exp = all_proj.filter(experience_type='project')
+    education = all_proj.filter(experience_type='education')
+
 
     context = {
         'title': 'Projects',
         'work_exp': work_exp,
-        'proj_exp': proj_exp
+        'proj_exp': proj_exp,
+        'education': education
     }
     return render(request, 'portfolio/experience.html', context)
 
