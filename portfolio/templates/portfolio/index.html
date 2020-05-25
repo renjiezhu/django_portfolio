@@ -2,5 +2,15 @@
 
 
 {% block content %}
-    <h2>DIV1</h2>
+    <div class="jumbotron">
+    <h1 class="display-4">Hello, it's Renjie Zhu.</h1>
+    <p class="lead">An introduction to myself, which I don't know how to write.</p>
+    <hr class="my-4">
+    <p class="lead">
+        <a href="{% url 'portfolio_project_page' %}" class="btn btn-primary btn-lg">My Projects</a>
+    </p>
+    <p class="lead">
+        <a href="{% url 'portfolio_contact_page' %}" class="btn btn-primary btn-lg">Contact Me</a>
+    </p>
+    </div>
 {% endblock content %}

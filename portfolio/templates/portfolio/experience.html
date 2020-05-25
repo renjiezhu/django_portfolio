@@ -1,7 +1,8 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h3 class="text-center text-uppercase">Professional Experience</h3>
+
+<h3 class="text-center text-uppercase my-4">Professional Experience</h3>
 <br>
 {% for work in work_exp %}
     <div class="card">
@@ -22,7 +23,7 @@
     </div>
 {% endfor %}
 
-<h3 class="text-center text-uppercase">Education</h3>
+<h3 class="text-center text-uppercase my-4">Education</h3>
 <br>
 {% for edu in education %}
     <div class="card">
@@ -43,7 +44,7 @@
     </div>
 {% endfor %}
 
-<h3 class="text-center text-uppercase">Projects</h3>
+<h3 class="text-center text-uppercase my-4">Projects</h3>
 <br>
 {% for proj in proj_exp %}
     <div class="card">

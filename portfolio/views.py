@@ -5,9 +5,10 @@ from .models import *
 
 def homepage(request):
     context = {
-        
+
     }
     return render(request, 'portfolio/index.html', context)
+
 
 def project_page(request):
 
@@ -17,7 +18,6 @@ def project_page(request):
     proj_exp = all_proj.filter(experience_type='project')
     education = all_proj.filter(experience_type='education')
 
-
     context = {
         'title': 'Projects',
         'work_exp': work_exp,
@@ -25,6 +25,7 @@ def project_page(request):
         'education': education
     }
     return render(request, 'portfolio/experience.html', context)
+
 
 def contact_page(request):
     context = {
