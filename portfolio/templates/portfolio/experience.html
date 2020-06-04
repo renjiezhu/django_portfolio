@@ -15,7 +15,9 @@
             {% if work.end_time %}{{work.end_time}}
             {% else %}Present
             {% endif %}</h6>
-            <p class="card-text">{{work.description}}</p>
+            <p class="card-text" style="white-space: pre-line;">
+                {{work.description}}
+            </p>
             <a href="{{work.github_url}}" class="badge badge-primary">github</a>
             <a href="#" class="badge badge-info">details</a>
         </div>
@@ -36,7 +38,9 @@
             {% if edu.end_time %}{{edu.end_time}}
             {% else %}Present
             {% endif %}</h6>
-            <p class="card-text">{{edu.description}}</p>
+            <p class="card-text" style="white-space: pre-line;">
+                {{edu.description}}
+            </p>
             {% comment %} <a href="{{edu.github_url}}" class="badge badge-primary">github</a> {% endcomment %}
             {% comment %} <a href="#" class="badge badge-info">details</a> {% endcomment %}
         </div>
@@ -57,7 +61,9 @@
             {% if proj.end_time %}{{proj.end_time}}
             {% else %}Present
             {% endif %}</h6>
-            <p class="card-text">{{proj.description}}</p>
+            <p class="card-text" style="white-space: pre-line;">
+                {{proj.description}}
+            </p>
             <a href="{{proj.github_url}}" class="badge badge-primary">github</a>
             <a href="#" class="badge badge-info">details</a>
         </div>
