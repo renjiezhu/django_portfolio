@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     # "*" # required when debug is False
-    "www.renjiezhu.com"
+    # "www.renjiezhu.com"
 ]
 
 
