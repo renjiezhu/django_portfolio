@@ -2,8 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def main_page(request):
-    context = {
+from rest_framework import viewsets
+from .serializers import TodoSerializer
+from .models import Todo
 
-    }
-    return render(request, "todo/main.html", context)
+
+class TodoView(viewsets.ModelViewSet):
+    serializer_class = TodoSerializer
+    queryset = Todo.objects.all()
